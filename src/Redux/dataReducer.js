@@ -2,7 +2,6 @@ import todoListRaw from './../api/todoList';
 
 
 const initialState = {
-    isCrossedOut: false,
     data: [...todoListRaw],
 };
 
@@ -24,8 +23,17 @@ const dataReducer =(state_ = initialState, {
                 }
             })
             break;
-        case 'CHECK_TODO':
-            state.isCrossedOut = !state.isCrossedOut;
+        case "CHECK_TODO": 
+            let idx = state.data.findIndex(d => d.id == payload.id);
+           
+            console.log(payload.id);
+            console.log(state.data[payload.id]);
+            let curr = state.data.find(d => d.id == payload.id);
+            let isDone = curr.isDone;
+            state.data.splice(idx, 1, {
+                ...curr, 
+                isDone: !isDone
+            });
             break;
     }
     return state;

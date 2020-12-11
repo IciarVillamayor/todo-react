@@ -17,7 +17,6 @@ function AddNewTodo() {
 
   const CloseNewTodoHandler = ()=>{
 
-    let titleInput= document.querySelectorAll(".todoTitle");
     dispatch({
       type: 'CANCEL_NEW_TODO',
       payload: {

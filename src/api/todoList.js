@@ -8,7 +8,8 @@ export default  [
     "badges": {
         "badge1": "#6FCF97",
         "badge2": "#F2994A"
-    }
+    },
+    "isDone": false
   }, 
   {
     "id": 2,
@@ -16,7 +17,8 @@ export default  [
     "badges": {
         "badge1": "#EB5757",
         "badge2": "#BB6BD9"
-    }
+    },
+    "isDone": false
   }, 
   {
     "id": 3,
@@ -24,7 +26,8 @@ export default  [
     "badges": {
         "badge1": "#57B0E2",
         "badge2": "#ffc107"
-    }
+    },
+    "isDone": false
   }, 
   {
     "id": 4,
@@ -32,7 +35,8 @@ export default  [
     "badges": {
         "badge1": "#E54B95",
         "badge2": "#ffc107"
-    }
+    },
+    "isDone": false
   }, 
   {
     "id": 5,
@@ -40,7 +44,8 @@ export default  [
     "badges": {
         "badge1": "#ffc107",
         "badge2": "#6610f2"
-    }
+    },
+    "isDone": false
   }, 
   {
     "id": 6,
@@ -48,7 +53,8 @@ export default  [
     "badges": {
         "badge1": "#6610f2",
         "badge2": "#F2994A"
-    }
+    },
+    "isDone": false
   }, 
   {
     "id": 7,
@@ -56,7 +62,8 @@ export default  [
     "badges": {
         "badge1": "#6FCF97",
         "badge2": "#ffc107"
-    }
+    },
+    "isDone": false
   }, 
   {
     "id": 8,
@@ -64,7 +71,8 @@ export default  [
     "badges": {
         "badge1": "#6610f2",
         "badge2": "#E54B95"
-    }
+    },
+    "isDone": false
   }, 
   {
     "id": 9,
@@ -72,7 +80,8 @@ export default  [
     "badges": {
         "badge1": "#6FCF97",
         "badge2": "#ffc107"
-    }
+    },
+    "isDone": false
   }, 
   {
     "id": 10,
@@ -80,6 +89,7 @@ export default  [
     "badges": {
         "badge1": "#6610f2",
         "badge2": "#E54B95"
-    }
+    },
+    "isDone": false
   }
 ]

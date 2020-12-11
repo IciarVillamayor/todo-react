@@ -23,7 +23,7 @@ function ListItemLabels({ getData }) {
 
         {
           Object.values(badges).map((badge, k) => (
-            <LabelStyled color={badge} className="list-inline-item m-n1"></LabelStyled>
+            <LabelStyled color={badge} key={k}className="list-inline-item m-n1"></LabelStyled>
 
           ))}
       </ul>
