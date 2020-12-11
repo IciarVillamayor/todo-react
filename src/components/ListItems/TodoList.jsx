@@ -10,16 +10,26 @@ const ListItemStyled = styled.span`
 `;
 
 function TodoList() {
+
     const { data } = useSelector(state => state.dataReducer);
-
-
-    
+    const { isCrossedOut } = useSelector(state=>state.dataReducer);
+    const sortData=()=>{
+        data.sort((a, b) => (a.title > b.title) ? 1 : -1)
+   
+        data.forEach((data , i)=>{
+           data.id= i;
+            //console.log(data);
+        })  
+      }
+      sortData();
   return (
     <div className="List mt-4 pt-4">
+
         {
+           
             data.map((getData,i)=>(
                
-                <ListItem getData={getData} key={i}/>
+                <ListItem crossedout={isCrossedOut} getData={getData} key={i}/>
                 
             ))
         }

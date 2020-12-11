@@ -15,7 +15,7 @@ function ListItemLabels({ getData }) {
 
 
 
-  console.log(Object.keys(badges));
+  //console.log(Object.keys(badges));
 
   return (
     <div className="labels text-dark">

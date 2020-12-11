@@ -11,21 +11,43 @@ const DivTransition = styled.div`
 function AddNewTodo() {
 
   const { isOpened } = useSelector(state=>state.rootReducer);
+  const { data } = useSelector(state=>state.dataReducer);
+
   const dispatch = useDispatch();
 
   const CloseNewTodoHandler = ()=>{
+
+    let titleInput= document.querySelectorAll(".todoTitle");
     dispatch({
       type: 'CANCEL_NEW_TODO',
       payload: {
+        
       }
   })
+  }
+
+  const addNewTodoHandler=()=>{
+    let titleInput= document.querySelector(".todoTitle");
+    console.log(data);
+    dispatch({
+      type: 'SAVE_NEW_TODO',
+      payload: {
+          id: null,
+          title: titleInput.value,
+          badges:{
+            badge1: "#EB5757",
+            badge2: "#ffc107"
+          }
+      }
+  })
+
   }
   return (
     
     <DivTransition className="addNew position-fixed p-4" opened={isOpened}>
       <h4 className="pt-4">Add new Todo</h4>
       <div className="form-buttons">
-        <button id="saveButton" className="rounded-circle btn btn-primary btn-lg bg-success text-white mr-2">
+        <button id="saveButton" onClick={addNewTodoHandler} className="rounded-circle btn btn-primary btn-lg bg-success text-white mr-2">
           +
         </button>
         <button id="cancelButton" onClick={CloseNewTodoHandler} className="rounded-circle btn btn-primary btn-lg bg-danger text-white">
@@ -36,7 +58,7 @@ function AddNewTodo() {
        <form action="">
         <div className="form-group">
             <label htmlFor="title">Título</label>
-            <input type="text" className="form-control"/>
+            <input type="text" className="form-control todoTitle"/>
             <small id="" className="form-text text-muted text-right w-100">0 / 250 caracteres</small>
         </div>
 
